@@ -1,0 +1,24 @@
+name: "Hive Loginstreak Action"
+
+on:
+  push:
+    branches:
+      - "main"
+  schedule:
+    - cron:  '20 0 * * *' # NOTE: 8pm
+
+env:
+  ACCOUNTS: "$(/bin/sh -c 'if [ $(ls -1 | wc -l) = 0 ]; then echo \"true\"; else echo \"false\"; fi')"
+
+jobs:
+  main:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: "Perform login"
+        run: echo ${{ env.ACCOUNTS }}
+
+      - name: "Perform login"
+        if: "${{ env.ACCOUNTS }} != 0"
+        run: npm run "join hive"
