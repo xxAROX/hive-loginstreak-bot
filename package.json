@@ -6,6 +6,7 @@
     "scripts": {
         "build": "tsc --project tsconfig.json",
         "join hive": "tsc --project tsconfig.json && node ./dist/index.js",
+        "join hive automatic": "tsc --project tsconfig.json && node ./dist/index.js auto",
         "add account": "tsc --project tsconfig.json && node ./dist/add_account.js"
     },
     "author": "xxAROX",
@@ -15,10 +16,12 @@
         "colors.ts": "^1.0.20",
         "date-fns": "^2.30.0",
         "jsonwebtoken": "^9.0.1",
+        "node-schedule": "^2.1.1",
         "prismarine-auth": "^2.2.0"
     },
     "devDependencies": {
         "@types/jsonwebtoken": "^9.0.2",
+        "@types/node-schedule": "^2.1.0",
         "typescript": "^5.1.6"
     }
 }

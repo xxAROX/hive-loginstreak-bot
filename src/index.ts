@@ -6,6 +6,7 @@
 
 import {Logger} from "./Logger";
 import {existsSync, mkdirSync, readdirSync} from "node:fs";
+import {scheduleJob} from "node-schedule";
 import {createClient} from "bedrock-protocol";
 import {Authflow} from "prismarine-auth";
 import {accountsFolder, mt_rand} from "./utils";
@@ -30,7 +31,6 @@ async function run(): Promise<void>{
 		process.exit(1);
 	}
 
-	logger.info("Creating client");
 	// @ts-ignore
 	const client = await createClient({
 		// @ts-ignore
@@ -55,4 +55,6 @@ async function run(): Promise<void>{
 	});
 }
 logger.info("Starting..");
-run();
+
+if (process.argv[2] && process.argv[2].toLowerCase().includes("auto")) scheduleJob("hive-loginstreak-bot", "* 20 4 * * *", fireDate => run());
+else run();
