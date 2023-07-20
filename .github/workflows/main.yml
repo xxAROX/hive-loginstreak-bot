@@ -8,17 +8,24 @@ on:
     - cron:  '20 0 * * *' # NOTE: 8pm
 
 env:
-  ACCOUNTS: "$(/bin/sh -c 'if [ $(ls -1 | wc -l) = 0 ]; then echo \"true\"; else echo \"false\"; fi')"
+  ACCOUNT_FOUND: "$(/bin/sh -c 'if [ $(ls -1 | wc -l) = 0 ]; then echo \"true\"; else echo \"false\"; fi')"
 
 jobs:
   main:
+    if: "${{ env.ACCOUNT_FOUND }} == 'true'"
     runs-on: "ubuntu-latest"
     steps:
-      - uses: actions/checkout@v3
+      - name: "Checkout"
+        uses: actions/checkout@v3
+
+      - name: "Setup NodeJS v20"
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: "Install dependencies"
+        run: "npm ci"
 
       - name: "Perform login"
-        run: echo ${{ env.ACCOUNTS }}
-
-      - name: "Perform login"
-        if: "${{ env.ACCOUNTS }} != 0"
-        run: npm run "join hive"
+        run: "npm run \"join hive\""
