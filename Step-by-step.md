@@ -8,8 +8,8 @@
    4. Copy the code and go to the [login website](https://www.microsoft.com/link).
    5. Login process
    6. BOOM! Account added!
-4. Upload the `.accounts` folder to your **private repository**, you forked in step one.
-5. Now the script should execute a workflow, and helps you with the loginstreak!
+5. Upload the `.accounts` folder to your **private repository**, you forked in step one.
+6. Now the script should execute a workflow, and helps you with the loginstreak!
 
 
 <div align="center" style="color: crimson;"><i>This tool may violate the terms of The Hive<small><small><small>, who tf reads these things?</small></small></small></i></div>
