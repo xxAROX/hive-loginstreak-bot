@@ -1,3 +1,5 @@
+<b><div align="center" style="color: crimson;"><h1>Outdated</h1></div></b>
+
 # Welcome to the Step-by-step guide
 1. Create a repo from this template-repository or if you lazy like me [click here](https://github.com/new?template_name=hive-loginstreak-bot&template_owner=xxAROX). 
 2. **Make the new repository private**, so nobody can catch your xbox account credentials.
