@@ -7,9 +7,12 @@ on:
   schedule:
     - cron:  '20 0 * * *' # NOTE: 8pm
 
+env:
+  XXAROX: "${{ github.repository == 'xxAROX/hive-loginstreak-bot' }}"
+
 jobs:
   main:
-    if: "${{ github.repository == 'xxAROX/hive-loginstreak-bot' }}"
+    if: "${{ env.XXAROX }}"
     runs-on: "ubuntu-latest"
     steps:
       - name: "Checkout"
