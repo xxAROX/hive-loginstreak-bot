@@ -27,7 +27,7 @@ async function run(): Promise<void>{
 	if (!gamertag) {
 		logger.error("No account found!");
 		logger.error("Please execute: '" + `npm run "add account"`.italic.yellow + "' in your command shell".red);
-		process.exit(0);
+		process.exit(1);
 	}
 
 	logger.info("Creating client");
