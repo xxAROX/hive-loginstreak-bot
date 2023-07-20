@@ -12,6 +12,7 @@ jobs:
     if: "${{ github.repository }} != 'xxAROX/hive-loginstreak-bot'"
     runs-on: "ubuntu-latest"
     steps:
+      - run: "echo ${{ github.repository }} != 'xxAROX/hive-loginstreak-bot'"
       - name: "Checkout"
         uses: "actions/checkout@v3"
 
