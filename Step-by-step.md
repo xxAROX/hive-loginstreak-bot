@@ -1,5 +1,5 @@
 # Welcome to the Step-by-step guide
-1. Fork this repository.
+1. Create a repo from this template-repository or if you lazy like me [click here](https://github.com/new?template_name=hive-loginstreak-bot&template_owner=xxAROX). 
 2. **Make the new repository private**, so nobody can catch your xbox account credentials.
 3. Add your xbox account:
    1. Clone your repo on you PC or create a Codespace for it.
