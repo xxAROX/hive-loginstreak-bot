@@ -2,7 +2,7 @@
 1. Fork this repository.
 2. **Make the new repository private**, so nobody can catch your xbox account credentials.
 3. Add your xbox account:
-   1. Clone your repo on you PC or create a Workspace for it.
+   1. Clone your repo on you PC or create a Codespace for it.
    2. Run `npm install` after that run `npm run "add account"`
    3. Be patient and wait for a message.
    4. Copy the code and go to the [login website](https://www.microsoft.com/link).
