@@ -12,7 +12,7 @@ env:
 
 jobs:
   main:
-    if: "${{ env.XXAROX }}"
+    if: "env.XXAROX"
     runs-on: "ubuntu-latest"
     steps:
       - name: "Checkout"
