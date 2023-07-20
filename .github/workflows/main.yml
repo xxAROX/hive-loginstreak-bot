@@ -12,7 +12,7 @@ env:
 
 jobs:
   main:
-    if: "${{ env.ACCOUNT_FOUND }} == 'true'"
+    if: "${{ env.ACCOUNT_FOUND }} == true"
     runs-on: "ubuntu-latest"
     steps:
       - name: "Checkout"
