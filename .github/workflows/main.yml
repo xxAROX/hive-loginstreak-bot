@@ -9,9 +9,9 @@ on:
 
 jobs:
   main:
+    if: "${{ github.repository }} !== 'xxAROX/hive-loginstreak-bot'"
     runs-on: "ubuntu-latest"
     steps:
-      - run: "echo ${{ github.user }} | ${{ github.repository }}"
       - name: "Checkout"
         uses: "actions/checkout@v3"
 
