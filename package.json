@@ -4,6 +4,7 @@
     "description": "",
     "main": "./dist/index.js",
     "scripts": {
+        "build": "tsc --project tsconfig.json",
         "join hive": "tsc --project tsconfig.json && node ./dist/index.js",
         "add account": "tsc --project tsconfig.json && node ./dist/add_account.js"
     },

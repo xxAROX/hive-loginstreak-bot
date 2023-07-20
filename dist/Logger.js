@@ -6,6 +6,11 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PrefixedLogger = exports.Logger = void 0;
+/*
+ * Copyright (c) Jan Sohn / xxAROX
+ * All rights reserved.
+ * I don't want anyone to use my source code without permission.
+ */
 // noinspection JSAnnotator
 const Colors = require("colors.ts");
 Colors.enable(true);
