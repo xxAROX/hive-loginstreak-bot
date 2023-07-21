@@ -1,5 +1,3 @@
-<b><div align="center" style="color: crimson;"><h1>Outdated</h1></div></b>
-
 # Welcome to the Step-by-step guide
 1. Clone this repository to your server.
 2. Run `cd hive-loginstreak-bot`
