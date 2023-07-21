@@ -12,8 +12,8 @@ import {Authflow} from "prismarine-auth";
 import {accountsFolder, mt_rand} from "./utils";
 import {cache_manager as authflow_cache_manager, options as authflow_options} from "./authflow_cache";
 
-const CRON_HOUR = 4;
-const CRON_MINUTES = 20;
+const CRON_HOUR = 4;		// NOTE: [*, 0-23]
+const CRON_MINUTES = 20;	// NOTE: [*, 0-59]
 
 console.clear();
 // noinspection JSAnnotator
@@ -66,5 +66,8 @@ async function run(): Promise<void>{
 }
 logger.info("Starting..");
 
-if (process.argv[2] && process.argv[2].toLowerCase().includes("auto")) scheduleJob("hive-loginstreak-bot", `* ${CRON_MINUTES} ${CRON_HOUR} * * *`, fireDate => run());
+if (process.argv[2] && process.argv[2].toLowerCase().includes("auto")) {
+	scheduleJob("hive-loginstreak-bot", `* ${CRON_MINUTES} ${CRON_HOUR} * * *`, fireDate => run());
+	logger.warn(`Accounts will connect on The Hive at ${CRON_HOUR}:${CRON_MINUTES}${CRON_HOUR > 12 ? "pm" : "am"}.`)
+}
 else run();
