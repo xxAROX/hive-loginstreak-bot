@@ -12,7 +12,6 @@ import {decode as jwt_decode} from "jsonwebtoken";
 import {cache_manager as authflow_cache_manager, options as authflow_options} from "./authflow_cache";
 
 async function run() {
-	console.log(accountsFolder())
 	// @ts-ignore
 	const keypair = generateKeyPairSync('ec', { namedCurve: "secp384r1" }).toString('base64');
 	const cacheKey = randomUUID();
