@@ -23,7 +23,7 @@
 
 #### Automatic join:
 
-> `> npm run "join hive automatic"` and the program joins at 4:20am every day on The Hive(recommend to use in a server that is marked as vpn/proxy, use rasberry pi 🤔) while the script is running.
+> `> npm run "join hive automatic"` and the program joins at 4:20am every day on The Hive(recommend to use in a server that **isn't** marked as vpn/proxy, use rasberry pi 🤔) while the script is running.
 
 ---
 
