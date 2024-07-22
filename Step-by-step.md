@@ -29,7 +29,7 @@
 
 <div align="center">
    <i style="color: crimson;">This tool may violate the terms of The Hive<small><small><small>, who tf reads these things?<small><small><small><small> lmao</small></small></small></small></small></small></small></i><br>
-   <span style="color: lightslategray;">The creator(@xxAROX) assumes no liability for any damage caused by this script. If you think otherwise</span>
+   <span style="color: lightslategray;">The creator(@xxAROX) assumes no liability for any damage caused by this script.</span>
 
 ---
 
